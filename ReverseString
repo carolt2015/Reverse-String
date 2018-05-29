@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  char[] text = "Hello";
+  int totalChars = sizeof(text) - 1;
+  char *pStart = text;
+  char *pEnd = text + totalChars - 1 ;
+  
+  while(pStart < pEnd){
+    char save = *pStart;
+    *pStart++ = *pEnd;
+    *pEnd-- = save;
+  }
+  cout << "The reveresed string is: " << text <<endl;
+return 0;  
+  
+}
